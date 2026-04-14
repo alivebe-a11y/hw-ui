@@ -14,6 +14,5 @@ hw-smi.vcxproj.*
 x64/
 Debug/
 Release/
-Dockerfile
 docker-compose.yml
 README.Docker.md
