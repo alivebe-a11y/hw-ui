@@ -1,0 +1,15 @@
+services:
+  hw-smi:
+    build: .
+    image: hw-ui:local
+    platform: linux/amd64
+    stdin_open: true
+    tty: true
+    # No default command - pass flags via `docker compose run --rm hw-smi ...`
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [utility]
